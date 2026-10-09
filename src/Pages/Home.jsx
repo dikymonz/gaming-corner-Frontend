@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import DiscordRoleClaim from '../components/RoleClaimCard';
 import TopDonators from '../components/TopDonators';
+import DiscordWidget from '../components/DiscordWidget'
 import {  ShieldCheck, Sparkles, MessageSquare, Radio } from 'lucide-react';
 
 const TARGET_CHANNEL_ID = '1232172281258836035';
@@ -170,7 +171,6 @@ export default function Home({ user }) {
         </div>
 
       </section>
-
       {/* CORE ECOSYSTEM HIGHLIGHTS & TOP DONATORS */}
       <section className="space-y-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-white/10 pb-6">
@@ -184,6 +184,7 @@ export default function Home({ user }) {
           </div>
         </div>
 
+      <DiscordWidget user={user} />
         <DiscordRoleClaim user={user} />
         
         {/* TOP DONATORS COMPONENT */}
